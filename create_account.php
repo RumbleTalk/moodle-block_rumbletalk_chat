@@ -19,8 +19,6 @@ echo $OUTPUT->header();
 
 $mform = new create_account_form();
 if ($mform->is_cancelled()) {
-    // form cancelled, redirect
-    // redirect(new moodle_url('create_account_form.php', array()));
     redirect(new moodle_url('/', ['redirect' => 0]));
 } else if ($data = $mform->get_data()) {
     // form has been submitted
@@ -30,11 +28,7 @@ if ($mform->is_cancelled()) {
         'email' => $email,
         'password' => $password);
     $PAGE->requires->js_call_amd('block_rumbletalk/create_account', 'init', array($create_params));
-    // $PAGE->requires->js_init_call('M.block_rumbletalk.create_account', null, false, $create_params);
-    // $PAGE->requires->js_init_call('M.block_rumbletalk.create_account', $create_params);
-    // create_account_form($data);
 } else {
-    // Form has not been submitted or there was an error
     // Just display the form
     $mform->set_data($create_account_params);
     $mform->display();
