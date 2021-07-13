@@ -2,7 +2,7 @@
 
 require_once("$CFG->libdir/externallib.php");
 
-class block_rumbletalk extends external_api {
+class create_account_external extends external_api {
         
     public static function account_create($itemid) {
         global $DB;
