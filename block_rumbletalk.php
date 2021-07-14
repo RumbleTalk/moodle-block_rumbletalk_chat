@@ -9,7 +9,6 @@ class block_rumbletalk extends block_base {
 
     public function get_content() {
         
-        // $this->page->requires->js_init_call('M.block_rumbletalk.init'); 
         global $COURSE, $USER, $PAGE;
 
         $this->content         =  new stdClass;
@@ -60,7 +59,8 @@ class block_rumbletalk extends block_base {
      
         $this->content->text .= '<p>&nbsp;</p>';
         $url = new moodle_url('/blocks/rumbletalk/create_account.php', array('blockid' => $this->instance->id, 'courseid' => $COURSE->id));
-        $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk'));
+        // $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk'));
+        $this->content->footer = 'RumbleTalk, LTD.';
 
         return $this->content;
     }
