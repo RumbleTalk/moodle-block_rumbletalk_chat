@@ -9,15 +9,18 @@ class block_rumbletalk_edit_form extends block_edit_form {
         // Input field for HashCode.
         $mform->addElement('text', 'config_code', get_string('embed_code', 'block_rumbletalk'));
         $mform->addRule('config_code', get_string('error_code_required', 'block_rumbletalk'), 'required', null, 'client');
+        $mform->addHelpButton('config_code', 'code', 'block_rumbletalk');
         $mform->setType('config_code', PARAM_TEXT);
 
         // Input field for Height.
         $mform->addElement('text', 'config_height', get_string('embed_height', 'block_rumbletalk'));
         $mform->addRule('config_height', get_string('error_numbers_only', 'block_rumbletalk'), 'numeric', null, 'client');
+        $mform->addHelpButton('config_height', 'height', 'block_rumbletalk');
         $mform->setType('config_height', PARAM_TEXT);
         
         // Checkbox for Members Only
         $mform->addElement('advcheckbox', 'config_members', 'Login Type: ', 'Members Only', array('group' => 1), array(0, 1));
+        $mform->addHelpButton('config_members', 'members', 'block_rumbletalk');
         $mform->setType('config_members', PARAM_TEXT);
 
     }
