@@ -13,7 +13,7 @@ $services = array(
   );
 
 $functions = array(
-    'create_account' => array(
+    'create_account_function' => array(
         'classname' => 'create_account_external',
         'methodname' => 'account_create',
         'classpath' => 'blocks/rumbletalk/externallib.php',
