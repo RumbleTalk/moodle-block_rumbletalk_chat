@@ -13,7 +13,6 @@ $PAGE->set_title('RumbleTalk: Create Account');
 $PAGE->set_heading('RumbleTalk: Create Account');
 $PAGE->navbar->add(get_string('pluginname', 'block_rumbletalk'));
 $PAGE->navbar->add(get_string('create_account', 'block_rumbletalk'));
-$PAGE->requires->js(new moodle_url('/blocks/rumbletalk/module.js'));
 
 echo $OUTPUT->header();
 
