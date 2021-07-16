@@ -1,21 +1,16 @@
-define(['jquery', 'core/ajax'], 
+define(['jquery', 'block_rumbletalk/ajaxcalls'], 
     function($, ajax){
 
-    Ajaxcall.prototype.account_create = function(data) {
-
-        console.log(data.email);
-        alert("Email: " + data.email + ", Password: " + data.password);
-    //     //var test = 1;
-    //     var promises = ajax.call([{
-    //         methodname: 'mod_testtest_loadsettings',
-    //         args: {itemid: itemid},
-    //         //done: console.log("ajax done")
-    //         fail: notification.exception
-    //     }]);
-    //     promises[0].then(function(data) {
-    //         console.log(data[0].content); //data contains webservice answer
-    //         txtareaupdate(data[0].content);
-    //     });
-    };
+    return {
+        init: function(data){
+            console.log(data.email);
+            alert("Email: " + data.email + ", Password: " + data.password);
+            var email = data.email;
+            var password = data.password;
+            var ajaxx = require("block_rumbletalk/ajaxcalls");
+            var ajax2 = new ajaxx();
+            ajax2.account_create(email, password);
+        }
+    }
 
 });
