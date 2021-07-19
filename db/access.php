@@ -19,7 +19,7 @@
  * Handles displaying the rumbletalk block.
  *
  * @package    block_rumbletalk
- * @copyright  2021 RumbleTalk, LTD {@link https://www.ubicast.eu}
+ * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
 
