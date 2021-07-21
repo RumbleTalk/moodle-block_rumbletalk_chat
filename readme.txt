@@ -1,5 +1,9 @@
-=== RumbleTalk ===
+=== RumbleTalk Group Chat ===
 Contributors: RumbleTalk
+
+RumbleTalk is a chat block plugin which allows you to embed a chat in your Moodle page. 
+
+It is the most customizable HTML5 group chat. A site owner can choose their own chat theme from a variety of ready made themes and even create their own theme. It is the fastest way to add a unique fully functional chatroom to any blog or website.
 
 Moodle Version Requirements
 Requires at least: 3.0
@@ -10,7 +14,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Live group chat plugin for Moodle. Integrate an online group chat for members only or a social open chat room on your website or for a live online events.
 
 == Plug-in Name ==
-RumbleTalk
+RumbleTalk Group Chat
 
 == Description == 
 
