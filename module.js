@@ -1,4 +1,4 @@
-M.block_rumbletalk = {
+M.block_rumbletalk_chat = {
     Y : null,
     transaction : [],
     init : function(Y){
@@ -7,7 +7,7 @@ M.block_rumbletalk = {
     },
 
     hello : function(Y){
-        alert('Hello, Welcome at RumbleTalk');
+        alert('Hello, Welcome at RumbleTalk Group Chat');
         this.Y = Y;
     },
 
