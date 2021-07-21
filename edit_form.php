@@ -16,35 +16,35 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Handles displaying the rumbletalk block.
+ * Handles displaying the rumbletalk group chat block.
  *
- * @package    block_rumbletalk
+ * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
 
-class block_rumbletalk_edit_form extends block_edit_form {
+class block_rumbletalk_chat_edit_form extends block_edit_form {
 
     protected function specific_definition($mform) {
 
         // Section header title according to language file.
-        $mform->addElement('header', 'config_header', get_string('embed_chat', 'block_rumbletalk'));
+        $mform->addElement('header', 'config_header', get_string('embed_chat', 'block_rumbletalk_chat'));
  
         // Input field for HashCode.
-        $mform->addElement('text', 'config_code', get_string('embed_code', 'block_rumbletalk'));
-        $mform->addRule('config_code', get_string('error_code_required', 'block_rumbletalk'), 'required', null, 'client');
-        $mform->addHelpButton('config_code', 'code', 'block_rumbletalk');
+        $mform->addElement('text', 'config_code', get_string('embed_code', 'block_rumbletalk_chat'));
+        $mform->addRule('config_code', get_string('error_code_required', 'block_rumbletalk_chat'), 'required', null, 'client');
+        $mform->addHelpButton('config_code', 'code', 'block_rumbletalk_chat');
         $mform->setType('config_code', PARAM_TEXT);
 
         // Input field for Height.
-        $mform->addElement('text', 'config_height', get_string('embed_height', 'block_rumbletalk'));
-        $mform->addRule('config_height', get_string('error_numbers_only', 'block_rumbletalk'), 'numeric', null, 'client');
-        $mform->addHelpButton('config_height', 'height', 'block_rumbletalk');
+        $mform->addElement('text', 'config_height', get_string('embed_height', 'block_rumbletalk_chat'));
+        $mform->addRule('config_height', get_string('error_numbers_only', 'block_rumbletalk_chat'), 'numeric', null, 'client');
+        $mform->addHelpButton('config_height', 'height', 'block_rumbletalk_chat');
         $mform->setType('config_height', PARAM_TEXT);
         
         // Checkbox for Members Only
         $mform->addElement('advcheckbox', 'config_members', 'Login Type: ', 'Members Only', array('group' => 1), array(0, 1));
-        $mform->addHelpButton('config_members', 'members', 'block_rumbletalk');
+        $mform->addHelpButton('config_members', 'members', 'block_rumbletalk_chat');
         $mform->setType('config_members', PARAM_TEXT);
 
     }
