@@ -4,7 +4,7 @@ RumbleTalk Group Chat is a chat block plugin which allows you to embed a chat in
 
 It is the most customizable HTML5 group chat. A site owner can choose their own chat theme from a variety of ready made themes and even create their own theme. It is the fastest way to add a unique fully functional chatroom to any blog or website.
 
-@package    block_rumbletalk
+@package    block_rumbletalk_chat
 @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com}
 @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
