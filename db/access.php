@@ -16,7 +16,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Handles displaying the rumbletalk block.
+ * Handles displaying the rumbletalk group chat block.
  *
  * @package    block_rumbletalk
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com}
