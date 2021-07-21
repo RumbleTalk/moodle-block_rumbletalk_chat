@@ -16,16 +16,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Handles displaying the rumbletalk block.
+ * Handles displaying the rumbletalk group chat block.
  *
- * @package    block_rumbletalk
+ * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
 
-class block_rumbletalk extends block_base {
+class block_rumbletalk_chat extends block_base {
     public function init() {
-        $this->title = get_string('rumbletalk', 'block_rumbletalk');
+        $this->title = get_string('rumbletalk', 'block_rumbletalk_chat');
         $this->site_id = SITEID;
     }
     
@@ -82,8 +82,8 @@ class block_rumbletalk extends block_base {
         }
      
         $this->content->text .= '<p>&nbsp;</p>';
-        $url = new moodle_url('/blocks/rumbletalk/create_account.php', array('blockid' => $this->instance->id, 'courseid' => $COURSE->id));
-        // $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk'));
+        $url = new moodle_url('/blocks/rumbletalk_chat/create_account.php', array('blockid' => $this->instance->id, 'courseid' => $COURSE->id));
+        // $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk_chat'));
         $this->content->footer = 'RumbleTalk, LTD.';
 
         return $this->content;
