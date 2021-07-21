@@ -16,15 +16,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Handles displaying the rumbletalk block.
+ * Handles displaying the rumbletalk group chat block.
  *
- * @package    block_rumbletalk
+ * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
 
-$plugin->component = 'block_rumbletalk';  // RumbleTalk plugin for Moodle
+$plugin->component = 'block_rumbletalk_chat';  // RumbleTalk plugin for Moodle
 $plugin->version = 2021051700;  // YYYYMMDDHH (year, month, day, 24-hr time)
-$plugin->requires = 2019052000; // YYYYMMDDHH 
+$plugin->requires = 2019052000; // YYYYMMDDHH
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = 'v1.0';
