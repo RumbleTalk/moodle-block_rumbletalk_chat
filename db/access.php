@@ -18,14 +18,14 @@
 /**
  * Handles displaying the rumbletalk group chat block.
  *
- * @package    block_rumbletalk
+ * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
 
     $capabilities = array(
  
-        'block/rumbletalk:myaddinstance' => array(
+        'block/rumbletalk_chat:myaddinstance' => array(
             'captype' => 'write',
             'contextlevel' => CONTEXT_SYSTEM,
             'archetypes' => array(
@@ -35,7 +35,7 @@
             'clonepermissionsfrom' => 'moodle/my:manageblocks'
         ),
      
-        'block/rumbletalk:addinstance' => array(
+        'block/rumbletalk_chat:addinstance' => array(
             'riskbitmask' => RISK_SPAM | RISK_XSS,
  
             'captype' => 'write',
