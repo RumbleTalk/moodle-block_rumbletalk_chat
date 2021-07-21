@@ -16,9 +16,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Handles displaying the rumbletalk block.
+ * Handles displaying the rumbletalk group chat block.
  *
- * @package    block_rumbletalk
+ * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
@@ -32,11 +32,11 @@ $create_account_params = [
 
 require_login();
 $PAGE->set_context(context_system::instance());
-$PAGE->set_url(new moodle_url('/blocks/rumbletalk/create_account.php'), $create_account_params);
-$PAGE->set_title('RumbleTalk: Create Account');
+$PAGE->set_url(new moodle_url('/blocks/rumbletalk_chat/create_account.php'), $create_account_params);
+$PAGE->set_title('RumbleTalk Group Chat: Create Account');
 $PAGE->set_heading('RumbleTalk: Create Account');
-$PAGE->navbar->add(get_string('pluginname', 'block_rumbletalk'));
-$PAGE->navbar->add(get_string('create_account', 'block_rumbletalk'));
+$PAGE->navbar->add(get_string('pluginname', 'block_rumbletalk_chat'));
+$PAGE->navbar->add(get_string('create_account', 'block_rumbletalk_chat'));
 
 echo $OUTPUT->header();
 
@@ -50,7 +50,7 @@ if ($mform->is_cancelled()) {
     $create_params = array(
         'email' => $email,
         'password' => $password);
-    $PAGE->requires->js_call_amd('block_rumbletalk/create_account', 'init', array($create_params));
+    $PAGE->requires->js_call_amd('block_rumbletalk_chat/create_account', 'init', array($create_params));
 } else {
     // Just display the form
     $mform->set_data($create_account_params);
