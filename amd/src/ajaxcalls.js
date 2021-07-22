@@ -5,7 +5,7 @@ define(['jquery', 'core/notification','core/ajax'],
         this.value = "ajax ok";
     };
     
-    Ajaxcall.prototype.updatesettings = function(email, password) {
+    Ajaxcall.prototype.account_create = function(email, password) {
 
         var promises = ajax.call([{
             methodname: 'create_account_function',
