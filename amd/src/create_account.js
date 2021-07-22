@@ -1,4 +1,4 @@
-define(['jquery', 'block_rumbletalk/ajaxcalls'], 
+define(['jquery', 'block_rumbletalk_chat/ajaxcalls'], 
     function($, ajax){
 
     return {
@@ -7,7 +7,7 @@ define(['jquery', 'block_rumbletalk/ajaxcalls'],
             alert("Email: " + data.email + ", Password: " + data.password);
             var email = data.email;
             var password = data.password;
-            var ajaxx = require("block_rumbletalk/ajaxcalls");
+            var ajaxx = require("block_rumbletalk_chat/ajaxcalls");
             var ajax2 = new ajaxx();
             ajax2.account_create(email, password);
         }
