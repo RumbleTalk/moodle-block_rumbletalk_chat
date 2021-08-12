@@ -35,6 +35,10 @@ class block_rumbletalk_chat extends block_base {
         
         global $COURSE, $USER, $PAGE;
 
+        if ($this->content !== NULL) {
+            return $this->content;
+        }
+        
         $this->content         =  new stdClass;
         
         if($USER->username == null){
