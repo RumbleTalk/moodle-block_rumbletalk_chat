@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 require_once($CFG->libdir . '/formslib.php');
 
-class create_account_form extends \moodleform {
+class create_form extends \moodleform {
  
     function definition() {
 
