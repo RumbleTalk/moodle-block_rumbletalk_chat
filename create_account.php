@@ -33,8 +33,8 @@ $create_account_params = [
 require_login();
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url(new moodle_url('/blocks/rumbletalk_chat/create_account.php'), $create_account_params);
-$PAGE->set_title('RumbleTalk Group Chat: Create Account');
-$PAGE->set_heading('RumbleTalk: Create Account');
+$PAGE->set_title(get_string('title_create', 'block_rumbletalk_chat'));
+$PAGE->set_heading(get_string('heading_create', 'block_rumbletalk_chat'));
 $PAGE->navbar->add(get_string('pluginname', 'block_rumbletalk_chat'));
 $PAGE->navbar->add(get_string('create_account', 'block_rumbletalk_chat'));
 
