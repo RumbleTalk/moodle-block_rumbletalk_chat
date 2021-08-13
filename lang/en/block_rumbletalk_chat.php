@@ -53,21 +53,19 @@ $string['create_account'] = 'Create Account';
 $string['create_email'] = 'Email: ';
 $string['create_password'] = 'Password: ';
 $string['create_button'] = 'Create';
+$string['title_create'] = 'RumbleTalk Group Chat: Create Account';
+$string['heading_create'] = 'RumbleTalk: Create Account';
 
-// Chat: Embed Strings
+// Chat: Embed Strings (Edit Form.php)
 $string['embed_chat'] = 'Embed a Chat';
 $string['embed_height'] = 'Chat Height: ';
 $string['embed_code'] = 'Chat Hashcode: ';
 $string['code'] = 'How to get hashcode?';
 $string['code_help'] = '<p>Where is a hashcode found?</p> 
 <p>You can find it at you Administrator panel(https://cp.rumbletalk.com/login) at RumbleTalk.</p>';
-
-// Chat: Height String
 $string['height'] = 'What is Chat Height?';
 $string['height_help'] = '<p>Chat\'s Height is based on pixels(px).</p>
 <p>Please enter numbers only.</p>';
-
-// Chat: Members String
 $string['members'] = 'Read instructions first, before checking the box.';
 $string['members_help'] = '<p>Before checking the box, you must first follow the steps below:</p>
 <ol>
@@ -78,6 +76,9 @@ $string['members_help'] = '<p>Before checking the box, you must first follow the
     <li>Click "Login Options" at the General tab</li>
     <li>Check the box for "User authentication required"</li>
 </ol>';
+$string['login_type'] = 'Login Type: ';
+$string['members_only'] = 'Members Only';
+$string['default_height'] = '500';
 
 // Settings Strings
 $string['headerconfig'] = 'Settings';
