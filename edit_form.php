@@ -43,7 +43,7 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         $mform->setType('config_height', PARAM_TEXT);
         
         // Checkbox for Members Only
-        $mform->addElement('advcheckbox', 'config_members', 'Login Type: ', 'Members Only', array('group' => 1), array(0, 1));
+        $mform->addElement('advcheckbox', 'config_members', get_string('login_type', 'block_rumbletalk_chat'), get_string('members_only', 'block_rumbletalk_chat'), array('group' => 1), array(0, 1));
         $mform->addHelpButton('config_members', 'members', 'block_rumbletalk_chat');
         $mform->setType('config_members', PARAM_TEXT);
 
@@ -53,9 +53,9 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         if (isset($this->config)) {
             //Default Height of the chat: 500px;
             if(empty($this->config->height)){
-                $this->config->height = '500';
+                $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
             }
-            $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
+            $this->content->text = get_string('chat_div', 'block_rumbletalk_chat');
         }
     }
 
@@ -69,7 +69,7 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         }
 
         if($this->config->members == 1){
-            $this->content->text .= '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', forceLogin: \'true\'})</script>';
+            $this->content->text .= get_string('rtmq_script', 'block_rumbletalk_chat');
         }
     
         // And now forward to the default implementation defined in the parent class
