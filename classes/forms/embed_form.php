@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 require_once($CFG->libdir . '/formslib.php');
 
-class embed_chat_form extends \moodleform {
+class embed_form extends \moodleform {
 
     function definition() {
 
