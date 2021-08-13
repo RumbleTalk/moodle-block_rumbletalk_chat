@@ -24,7 +24,7 @@
 */
 
 require_once('../../config.php');
-require_once('create_account_form.php');
+require_once('/blocks/rumbletalk_chat/classes/forms/create_form.php');
 
 $create_account_params = [
     'id' => $USER->id
