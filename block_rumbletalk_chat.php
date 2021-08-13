@@ -51,10 +51,10 @@ class block_rumbletalk_chat extends block_base {
                 if(empty($this->config->height)){
 
                     //Default Height of the chat: 500px;
-                    $this->config->height = '500';
-                    $this->content->text = get_string('chat_div', 'block_rumbletalk_chat');
+                    $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
+                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 } else {
-                    $this->content->text = get_string('chat_div', 'block_rumbletalk_chat');
+                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 }
 
                 // Check Members Login
@@ -63,8 +63,21 @@ class block_rumbletalk_chat extends block_base {
                     $userpicture = new user_picture($USER);
                     $url = $userpicture->get_url($PAGE);
 
-                    $this->content->text .= get_string('login_script', 'block_rumbletalk_chat');
-                    $this->content->text .= get_string('rtmq_script', 'block_rumbletalk_chat');
+                    $this->content->text .= "<script>
+                        (function(g, v, w, d, s, a, b) {
+                        w['rumbleTalkMessageQueueName'] = g;
+                        w[g] = w[g] ||
+                        function() {
+                        (w[g].q = w[g].q || []).push(arguments)
+                        };
+                        a = d.createElement(s);
+                        b = d.getElementsByTagName(s)[0];
+                        a.async = 1;
+                        a.src = 'https://d1pfint8izqszg.cloudfront.net/api/' + v + '/sdk.js';
+                        b.parentNode.insertBefore(a, b);
+                        })('rtmq', 'v1.0.0', window, document, 'script'); 
+                    </script>";
+                    $this->content->text .= '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', image: \'' . $url . '\', forceLogin: \'true\'})</script>';
                 }
 
             } else {
