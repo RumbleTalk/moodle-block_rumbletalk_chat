@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,12 +20,12 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 $string['pluginname'] = 'RumbleTalk Group Chat';
 $string['rumbletalk'] = 'RumbleTalk Group Chat';
 
-// Block Strings
+// Block Strings.
 $string['hello_guest'] = 'Hello guest, please login first to join our awesome chat.';
 $string['chat_div'] = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
 $string['login_script'] = "<script>
@@ -48,7 +47,7 @@ $string['no_chat'] = 'There is no chat available.';
 $string['line_break'] = '<p>&nbsp;</p>';
 $string['trademark'] = 'RumbleTalk, LTD.';
 
-// Create Account Strings
+// Create Account Strings.
 $string['create_account'] = 'Create Account';
 $string['create_email'] = 'Email: ';
 $string['create_password'] = 'Password: ';
@@ -56,7 +55,7 @@ $string['create_button'] = 'Create';
 $string['title_create'] = 'RumbleTalk Group Chat: Create Account';
 $string['heading_create'] = 'RumbleTalk: Create Account';
 
-// Chat: Embed Strings (Edit Form.php)
+// Chat: Embed Strings (Edit Form.php).
 $string['embed_chat'] = 'Embed a Chat';
 $string['embed_height'] = 'Chat Height: ';
 $string['embed_code'] = 'Chat Hashcode: ';
@@ -80,11 +79,11 @@ $string['login_type'] = 'Login Type: ';
 $string['members_only'] = 'Members Only';
 $string['default_height'] = '500';
 
-// Settings Strings
+// Settings Strings.
 $string['headerconfig'] = 'Settings';
 $string['descconfig'] = 'The RumbleTalk Group Chat settings can change your chat\'s settings.';
 
-// Error Strings
+// Error Strings.
 $string['error_email_required'] = 'Please enter an email.';
 $string['error_email_regex'] = 'Please enter a  valid email.';
 $string['error_password_required'] = 'Please enter a password.';
@@ -95,7 +94,7 @@ $string['error_code_required'] = 'Please enter a hashcode';
 $string['rumbletalk:addinstance'] = 'Add a RumbleTalk Chat block';
 $string['rumbletalk:myaddinstance'] = 'Add a new RumbleTalk Chat block to the My Moodle page';
 
-// Privacy Strings
+// Privacy Strings.
 $string['privacy:metadata:rumbletalk_client'] = 'In order to integrate with a RumbleTalk service, user data needs to be exchanged with the RumbleTalk service.
 For more information, you can visit our RumbleTalk Privacy and GDRP, https://rumbletalk.com/about_us/privacy_policy/.';
 $string['privacy:metadata:rumbletalk_client:email'] = 'The user\'s email must be sent from Moodle to allow RumbleTalk to determine a user account.';
