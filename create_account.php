@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,18 +20,18 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 require_once('../../config.php');
 require_once('/blocks/rumbletalk_chat/classes/forms/create_form.php');
 
-$create_account_params = [
+$createaccountparams = [
     'id' => $USER->id
 ];
 
 require_login();
 $PAGE->set_context(context_system::instance());
-$PAGE->set_url(new moodle_url('/blocks/rumbletalk_chat/create_account.php'), $create_account_params);
+$PAGE->set_url(new moodle_url('/blocks/rumbletalk_chat/create_account.php'), $createaccountparams);
 $PAGE->set_title(get_string('title_create', 'block_rumbletalk_chat'));
 $PAGE->set_heading(get_string('heading_create', 'block_rumbletalk_chat'));
 $PAGE->navbar->add(get_string('pluginname', 'block_rumbletalk_chat'));
@@ -44,7 +43,7 @@ $mform = new create_account_form();
 if ($mform->is_cancelled()) {
     redirect(new moodle_url('/', ['redirect' => 0]));
 } else if ($data = $mform->get_data()) {
-    // form has been submitted
+    // Form has been submitted.
     $email = $data->create_email;
     $password = $data->create_password;
     $create_params = array(
@@ -52,7 +51,7 @@ if ($mform->is_cancelled()) {
         'password' => $password);
     $PAGE->requires->js_call_amd('block_rumbletalk_chat/create_account', 'init', array($create_params));
 } else {
-    // Just display the form
-    $mform->set_data($create_account_params);
+    // Just display the form.
+    $mform->set_data($createaccountparams);
     $mform->display();
 }
