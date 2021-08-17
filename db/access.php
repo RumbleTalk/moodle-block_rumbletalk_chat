@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,31 +20,25 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
     $capabilities = array(
- 
         'block/rumbletalk_chat:myaddinstance' => array(
             'captype' => 'write',
             'contextlevel' => CONTEXT_SYSTEM,
             'archetypes' => array(
                 'user' => CAP_ALLOW
             ),
-     
             'clonepermissionsfrom' => 'moodle/my:manageblocks'
         ),
-     
         'block/rumbletalk_chat:addinstance' => array(
             'riskbitmask' => RISK_SPAM | RISK_XSS,
- 
             'captype' => 'write',
             'contextlevel' => CONTEXT_BLOCK,
             'archetypes' => array(
                 'editingteacher' => CAP_ALLOW,
                 'manager' => CAP_ALLOW
             ),
-     
             'clonepermissionsfrom' => 'moodle/site:manageblocks'
         ),
-
     );
