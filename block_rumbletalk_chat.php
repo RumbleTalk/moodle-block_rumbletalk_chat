@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,7 +20,7 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 class block_rumbletalk_chat extends block_base {
     public function init() {
@@ -39,25 +38,24 @@ class block_rumbletalk_chat extends block_base {
             return $this->content;
         }
         
-        $this->content         =  new stdClass;
+        $this->content = new stdClass;
         
         if($USER->username == null){
            $this->content->text = get_string('hello_guest', 'block_rumbletalk_chat');
-
         } else {
             if (!empty($this->config->code)) {
 
-                // Check Height
+                // Check Height.
                 if(empty($this->config->height)){
 
-                    //Default Height of the chat: 500px;
+                    //Default Height of the chat is 500px.
                     $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
                     $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 } else {
                     $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 }
 
-                // Check Members Login
+                // Check Members Login.
                 if($this->config->members == 1){
 
                     $userpicture = new user_picture($USER);
@@ -87,7 +85,7 @@ class block_rumbletalk_chat extends block_base {
      
         $this->content->text .= get_string('line_break', 'block_rumbletalk_chat');
         $url = new moodle_url('/blocks/rumbletalk_chat/create_account.php', array('blockid' => $this->instance->id, 'courseid' => $COURSE->id));
-        // $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk_chat'));
+        // $this->content->footer = html_writer::link($url, get_string('create_account', 'block_rumbletalk_chat'));.
         $this->content->footer = get_string('trademark', 'block_rumbletalk_chat');
 
         return $this->content;
