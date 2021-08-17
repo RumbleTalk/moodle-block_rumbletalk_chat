@@ -25,12 +25,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 $services = array(
-      'mypluginservice' => array(                      
-          'functions' => array ('create_account'), 
-          'requiredcapability' => '',                                                     
-          'restrictedusers' =>0,                                             
-          'enabled'=>1,                              
-          'shortname'=>'create_account' 
+      'mypluginservice' => array(
+          'functions' => array ('create_account'),
+          'requiredcapability' => '',
+          'restrictedusers' => 0,
+          'enabled' => 1,
+          'shortname' => 'create_account'
        )
   );
 
