@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,38 +20,33 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 class block_rumbletalk_chat_edit_form extends block_edit_form {
 
     protected function specific_definition($mform) {
-
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('embed_chat', 'block_rumbletalk_chat'));
- 
         // Input field for HashCode.
         $mform->addElement('text', 'config_code', get_string('embed_code', 'block_rumbletalk_chat'));
         $mform->addRule('config_code', get_string('error_code_required', 'block_rumbletalk_chat'), 'required', null, 'client');
         $mform->addHelpButton('config_code', 'code', 'block_rumbletalk_chat');
         $mform->setType('config_code', PARAM_TEXT);
-
         // Input field for Height.
         $mform->addElement('text', 'config_height', get_string('embed_height', 'block_rumbletalk_chat'));
         $mform->addRule('config_height', get_string('error_numbers_only', 'block_rumbletalk_chat'), 'numeric', null, 'client');
         $mform->addHelpButton('config_height', 'height', 'block_rumbletalk_chat');
         $mform->setType('config_height', PARAM_TEXT);
-        
-        // Checkbox for Members Only
+        // Checkbox for Members Only.
         $mform->addElement('advcheckbox', 'config_members', get_string('login_type', 'block_rumbletalk_chat'), get_string('members_only', 'block_rumbletalk_chat'), array('group' => 1), array(0, 1));
         $mform->addHelpButton('config_members', 'members', 'block_rumbletalk_chat');
         $mform->setType('config_members', PARAM_TEXT);
-
     }
 
     public function specialization() {
         if (isset($this->config)) {
-            //Default Height of the chat: 500px;
-            if(empty($this->config->height)){
+            // Default Height of the chat is 500px.
+            if (empty($this->config->height)) {
                 $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
             }
             $this->content->text = get_string('chat_div', 'block_rumbletalk_chat');
@@ -63,17 +57,17 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         return true;
       }
 
-    public function instance_config_save($data,$nolongerused =false) {
-        if(get_config('rumbletalk', 'Allow_HTML')) {
+    public function instance_config_save($data, $nolongerused =false) {
+        if (get_config('rumbletalk', 'Allow_HTML')) {
             $data->text = strip_tags($data->text);
         }
 
-        if($this->config->members == 1){
+        if ($this->config->members == 1) {
             $this->content->text .= get_string('rtmq_script', 'block_rumbletalk_chat');
         }
     
-        // And now forward to the default implementation defined in the parent class
-        return parent::instance_config_save($data,$nolongerused);
+        // And now forward to the default implementation defined in the parent class.
+        return parent::instance_config_save($data, $nolongerused);
     }
 
 }
