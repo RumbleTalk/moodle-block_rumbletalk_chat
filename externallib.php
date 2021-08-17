@@ -37,5 +37,5 @@ class create_account_external extends external_api {
         $dbresult = $DB->get_records_sql($sql, $paramsdb);
         return $dbresult;
     }
-    
+
 }
