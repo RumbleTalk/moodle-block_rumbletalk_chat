@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,25 +20,23 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
+defined('MOODLE_INTERNAL') || die();
 require_once("$CFG->libdir/externallib.php");
 
 class create_account_external extends external_api {
         
     public static function account_create($itemid) {
         global $DB;
-        //$params = self::validate_parameters(self::getExample_parameters(), array());
         $params = self::validate_parameters(self::loadsettings_parameters(), 
-                array('itemid'=>$itemid));
+                array('itemid' => $itemid));
 
         $sql = 'SELECT content FROM {testtest} WHERE id = ?';
-        $paramsDB = $params; //array($itemid);
-        $db_result = $DB->get_records_sql($sql,$paramsDB);
+        $paramsdb = $params;
+        $dbresult = $DB->get_records_sql($sql,$paramsdb);
         
-        return $db_result;
+        return $dbresult;
     }
     
 }
-
-
