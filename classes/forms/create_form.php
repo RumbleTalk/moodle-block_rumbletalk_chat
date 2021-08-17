@@ -26,7 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 require_once($CFG->libdir . '/formslib.php');
 
 class create_form extends \moodleform {
- 
     public function definition() {
         global $CFG;
         $mform =& $this->_form;
@@ -35,12 +34,15 @@ class create_form extends \moodleform {
         $this->course = $this->_customdata['course'];
         $mform->addElement('header', 'config_header', get_string('create_account', 'block_rumbletalk_chat'));
         // A sample string variable with a default value.
-        $mform->addElement('text', 'create_email', get_string('create_email', 'block_rumbletalk_chat'), 'minlenght="10" maxlength="100" size="25"');
+        $mform->addElement('text', 'create_email', get_string('create_email', 'block_rumbletalk_chat'), 
+                           'minlenght="10" maxlength="100" size="25"');
         $mform->addRule('create_email', get_string('error_email_required', 'block_rumbletalk_chat'), 'required', null, 'client');
         $mform->setType('create_email', PARAM_NOTAGS);
         // A sample string variable with a default value.
-        $mform->addElement('password', 'create_password', get_string('create_password', 'block_rumbletalk_chat'), 'minlength="6" maxlength="12" size="25"');
-        $mform->addRule('create_password', get_string('error_password_required', 'block_rumbletalk_chat'), 'required', null, 'client');
+        $mform->addElement('password', 'create_password', get_string('create_password', 'block_rumbletalk_chat'), 
+                           'minlength="6" maxlength="12" size="25"');
+        $mform->addRule('create_password', get_string('error_password_required', 'block_rumbletalk_chat'), 
+                        'required', null, 'client');
         $mform->setType('create_password', PARAM_TEXT);
         $this->add_action_buttons();
     }
