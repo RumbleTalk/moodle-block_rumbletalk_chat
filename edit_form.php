@@ -38,7 +38,8 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         $mform->addHelpButton('config_height', 'height', 'block_rumbletalk_chat');
         $mform->setType('config_height', PARAM_TEXT);
         // Checkbox for Members Only.
-        $mform->addElement('advcheckbox', 'config_members', get_string('login_type', 'block_rumbletalk_chat'), get_string('members_only', 'block_rumbletalk_chat'), array('group' => 1), array(0, 1));
+        $mform->addElement('advcheckbox', 'config_members', get_string('login_type', 'block_rumbletalk_chat'),
+         get_string('members_only', 'block_rumbletalk_chat'), array('group' => 1), array(0, 1));
         $mform->addHelpButton('config_members', 'members', 'block_rumbletalk_chat');
         $mform->setType('config_members', PARAM_TEXT);
     }
@@ -55,7 +56,7 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
 
     public function instance_allow_multiple() {
         return true;
-      }
+    }
 
     public function instance_config_save($data, $nolongerused =false) {
         if (get_config('rumbletalk', 'Allow_HTML')) {
@@ -65,7 +66,7 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
         if ($this->config->members == 1) {
             $this->content->text .= get_string('rtmq_script', 'block_rumbletalk_chat');
         }
-    
+
         // And now forward to the default implementation defined in the parent class.
         return parent::instance_config_save($data, $nolongerused);
     }
