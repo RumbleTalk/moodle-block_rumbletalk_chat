@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,14 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
+/*
  * Handles displaying the rumbletalk group chat block.
  *
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 */
-
 defined('MOODLE_INTERNAL') || die;
 
 $settings->add(new admin_setting_heading(
@@ -30,4 +28,3 @@ $settings->add(new admin_setting_heading(
             get_string('headerconfig', 'block_rumbletalk_chat'),
             get_string('descconfig', 'block_rumbletalk_chat')
         ));
- 
