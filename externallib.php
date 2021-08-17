@@ -26,16 +26,15 @@ defined('MOODLE_INTERNAL') || die();
 require_once("$CFG->libdir/externallib.php");
 
 class create_account_external extends external_api {
-        
+
     public static function account_create($itemid) {
         global $DB;
-        $params = self::validate_parameters(self::loadsettings_parameters(), 
+        $params = self::validate_parameters(self::loadsettings_parameters(),
                 array('itemid' => $itemid));
 
         $sql = 'SELECT content FROM {testtest} WHERE id = ?';
         $paramsdb = $params;
-        $dbresult = $DB->get_records_sql($sql,$paramsdb);
-        
+        $dbresult = $DB->get_records_sql($sql, $paramsdb);
         return $dbresult;
     }
     
