@@ -22,6 +22,8 @@
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 $services = array(
       'mypluginservice' => array(                      
           'functions' => array ('create_account'), 
