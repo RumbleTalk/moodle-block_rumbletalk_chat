@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,37 +20,28 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 defined('MOODLE_INTERNAL') || die();
 require_once($CFG->libdir . '/formslib.php');
 
 class create_form extends \moodleform {
  
-    function definition() {
-
+    public function definition() {
         global $CFG;
-
         $mform =& $this->_form;
-
         $this->context = $this->_customdata['context'];
         $this->user = $this->_customdata['user'];
         $this->course = $this->_customdata['course'];
-
         $mform->addElement('header', 'config_header', get_string('create_account', 'block_rumbletalk_chat'));
- 
         // A sample string variable with a default value.
         $mform->addElement('text', 'create_email', get_string('create_email', 'block_rumbletalk_chat'), 'minlenght="10" maxlength="100" size="25"');
         $mform->addRule('create_email', get_string('error_email_required', 'block_rumbletalk_chat'), 'required', null, 'client');
-       
         $mform->setType('create_email', PARAM_NOTAGS);
-
         // A sample string variable with a default value.
         $mform->addElement('password', 'create_password', get_string('create_password', 'block_rumbletalk_chat'), 'minlength="6" maxlength="12" size="25"');
         $mform->addRule('create_password', get_string('error_password_required', 'block_rumbletalk_chat'), 'required', null, 'client');
         $mform->setType('create_password', PARAM_TEXT);
-
-
         $this->add_action_buttons();
     }
 }
