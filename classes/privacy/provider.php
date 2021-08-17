@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,7 +20,7 @@
  * @package    block_rumbletalk_chat
  * @copyright  2021 RumbleTalk, LTD {@link https://www.rumbletalk.com/}
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ */
 
 namespace block_rumbletalk_chat\privacy;
 use core_privacy\local\metadata\collection;
