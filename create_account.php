@@ -46,10 +46,10 @@ if ($mform->is_cancelled()) {
     // Form has been submitted.
     $email = $data->create_email;
     $password = $data->create_password;
-    $create_params = array(
+    $createparams = array(
         'email' => $email,
         'password' => $password);
-    $PAGE->requires->js_call_amd('block_rumbletalk_chat/create_account', 'init', array($create_params));
+    $PAGE->requires->js_call_amd('block_rumbletalk_chat/create_account', 'init', array($createparams));
 } else {
     // Just display the form.
     $mform->set_data($createaccountparams);
