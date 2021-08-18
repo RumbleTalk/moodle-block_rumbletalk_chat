@@ -28,27 +28,29 @@ class block_rumbletalk_chat extends block_base {
         $this->site_id = SITEID;
     }
     
-    function has_config() {return true;}
+    public function has_config() {
+        return true;
+    }
 
     public function get_content() {
         
-        global $COURSE, $USER, $PAGE;
+        global $COURSE, $USER;
 
-        if ($this->content !== NULL) {
+        if ($this->content !== null) {
             return $this->content;
         }
         
         $this->content = new stdClass;
         
-        if($USER->username == null){
+        if ($USER->username == null) {
            $this->content->text = get_string('hello_guest', 'block_rumbletalk_chat');
         } else {
             if (!empty($this->config->code)) {
 
                 // Check Height.
-                if(empty($this->config->height)){
+                if (empty($this->config->height)) {
 
-                    //Default Height of the chat is 500px.
+                    // Default Height of the chat is 500px.
                     $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
                     $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 } else {
@@ -56,10 +58,10 @@ class block_rumbletalk_chat extends block_base {
                 }
 
                 // Check Members Login.
-                if($this->config->members == 1){
+                if ($this->config->members == 1) {
 
                     $userpicture = new user_picture($USER);
-                    $url = $userpicture->get_url($PAGE);
+                    $url = $userpicture->get_url($this->page);
 
                     $this->content->text .= "<script>
                         (function(g, v, w, d, s, a, b) {
