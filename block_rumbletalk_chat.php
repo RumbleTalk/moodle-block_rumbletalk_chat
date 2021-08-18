@@ -27,23 +27,23 @@ class block_rumbletalk_chat extends block_base {
         $this->title = get_string('rumbletalk', 'block_rumbletalk_chat');
         $this->site_id = SITEID;
     }
-    
+
     public function has_config() {
         return true;
     }
 
     public function get_content() {
-        
+
         global $COURSE, $USER;
 
         if ($this->content !== null) {
             return $this->content;
         }
-        
+
         $this->content = new stdClass;
-        
+
         if ($USER->username == null) {
-           $this->content->text = get_string('hello_guest', 'block_rumbletalk_chat');
+            $this->content->text = get_string('hello_guest', 'block_rumbletalk_chat');
         } else {
             if (!empty($this->config->code)) {
 
@@ -52,9 +52,13 @@ class block_rumbletalk_chat extends block_base {
 
                     // Default Height of the chat is 500px.
                     $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
-                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
+                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;">
+                    <div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '">
+                    </script></div>';
                 } else {
-                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
+                    $this->content->text = '<div style="height: ' . $this->config->height . 'px;">
+                    <div id="rt-' . md5($this->config->code) . '"></div> 
+                    <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
                 }
 
                 // Check Members Login.
@@ -73,9 +77,10 @@ class block_rumbletalk_chat extends block_base {
                         a = d.createElement(s);
                         b = d.getElementsByTagName(s)[0];
                         a.async = 1;
-                        a.src = 'https://d1pfint8izqszg.cloudfront.net/api/' + v + '/sdk.js';
+                        a.src = 'https://d1pfint8izqszg.cloudfront.net/api/'
+                         + v + '/sdk.js';
                         b.parentNode.insertBefore(a, b);
-                        })('rtmq', 'v1.0.0', window, document, 'script'); 
+                        })('rtmq', 'v1.0.0', window, document, 'script');
                     </script>";
                     $this->content->text .= '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', image: \'' . $url . '\', forceLogin: \'true\'})</script>';
                 }
