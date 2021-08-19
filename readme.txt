@@ -3,8 +3,6 @@ Contributors: RumbleTalk
 
 RumbleTalk Group chat is a block plugin which allows you to embed a chat in your Moodle page. 
 
-The chat is free for a limited number of seats, you must have a paid subscription to be able to use the advanced features and extra seats.
-
 It is the most customizable HTML5 group chat. A site owner can choose their own chat theme from a variety of ready made themes and even create their own theme. It is the fastest way to add a unique fully functional chatroom to any blog or website.
 
 Moodle Version Requirements
@@ -28,7 +26,7 @@ RumbleTalk is a members group chat for a public open chat or for a private membe
 - The account owner may create one room or several rooms
 - In every room, there is a place for a group discussion as well as a private one-on-one chat between participants (can be configured).
 
-The chat platform is a hosted professional **chat room plugin** with a quick integration to your WordPress members' userbase. 
+The chat platform is a hosted professional **chat room plugin** with a quick integration to your Moodle members' userbase. 
 You may add it to any type of website, blog, or real-time event.
 
 Unique features that can be set in the admin panel: 
@@ -58,7 +56,7 @@ Adding one room is no brainer with RumbleTalk plugin. Add a chat widget to the y
 <pre>
 		 
 NEW - support for avatar integration with different members plugins.
-NEW - Integration with wordpress users base avatar
+NEW - Integration with Moodle users base avatar
 Support for Donations 
 
 
@@ -84,7 +82,7 @@ Support for Donations
 * Set Private chats with registered users
 * Spam Filter applied also for users name
 * Create additional rooms directly from the plugin
-* Open settings from WordPress admin
+* Open settings from Moodle admin
 * Delete Archive messages directly from the chat 
 * Increase Font Size in mobile
 
@@ -246,7 +244,7 @@ You can simply set the chat to be members only. This is super simple, one checkb
 
 = I see "This chat-room is for private users only" what can I do? =
 
-This message indicates that the chat accepts only "WordPress users", meaning users that are already logged in to your WordPress site.
+This message indicates that the chat accepts only "Moodle users", meaning users that are already logged in to your Moodle site.
 1) If you do not want that, uncheck the "members" checkbox in your plugin.
 2) If the members checkbox is checked and you actually need only members to login to your chat, you will need to check the GUEST login option in the chat settings.
 This does not mean guests will be able to log in, but it will activate a background module that is needed for the Auto-login option.
@@ -263,7 +261,7 @@ The options are:
 * Twitter - Login as a Twitter user with twitter avatar.
 * Register - User can log in after registering to the room.
 * Admins and Users (RumbleTalk Login) - This is a pre-registered list of users. You need to define them upfront in the chat settings (You may set a special avatar per user).  
-* Members - This is actually the option for users to log in automatically using your Wordpress users base.
+* Members - This is actually the option for users to log in automatically using your Moodle users base.
 
 = Can I chat with my iPad or iPhone or any other smartphone?  =
 
@@ -287,7 +285,7 @@ If that does not work for you, try to use a direct embed, meaning the code we su
 
 = Can I use a direct embed in an HTML page? =
  
-Sure (but not recommended), you can go to the TEXT part in WordPress editor (in each page you have one) and copy paste a code that looks like that.
+Sure (but not recommended), you can go to the TEXT part in Moodle editor (in each page you have one) and copy paste a code that looks like that.
 Note: you will need to replace the "chatcode" text in this example below with your own 8 digit Rumbletalk code.
 You can also play with the width and height figures.
 
@@ -301,7 +299,7 @@ Example:
 
 = Can I integrate with my members chat? =
  
-Yes, it is easy to integrate with your Wordpress, Buddypress users base.
+Yes, it is easy to integrate with your Moodle, Buddypress users base.
 The integration is actually a checkbox away.
 
 = How to change a member name (the one showing in the chat) when a user is auto-login?  =
@@ -311,11 +309,11 @@ Click on it and choose the name that will show when one login to the room.
 
 = How to login as admin when using the members option for auto-login? =
 
-If you want to login as admin to the chat, you will need to have the exact same name defined in Wordpress users and in Rumbletalk users tab.
+If you want to login as admin to the chat, you will need to have the exact same name defined in Moodle users and in Rumbletalk users tab.
 First, create a user at RumbleTalk users tab. Choose an admin NICKNAME.
-Then, create the same name in your wordpress users area.
+Then, create the same name in your Moodle users area.
 
-Now, when the auto login works, it gets the name from Wordpress and then check it against the rumbletalk users.
+Now, when the auto login works, it gets the name from Moodle and then check it against the rumbletalk users.
 If the name is identical (case sensitive), the admin will need to provide a password for the first time.
 
 = Is it FREE ? =
