@@ -66,15 +66,8 @@ $string['height'] = 'What is Chat Height?';
 $string['height_help'] = '<p>Chat\'s Height is based on pixels(px).</p>
 <p>Please enter numbers only.</p>';
 $string['members'] = 'Read instructions first, before checking the box.';
-$string['members_help'] = '<p>Before checking the box, you must first follow the steps below:</p>
-<ol>
-    <li>Login to your Administrator Panel(https://cp.rumbletalk.com/login)</li>
-    <li>Choose your chat at "Selected Chat"</li>
-    <li>Open "Settings"</li>
-    <li>Select "General & Logins" at the drop-down list</li>
-    <li>Click "Login Options" at the General tab</li>
-    <li>Check the box for "User authentication required"</li>
-</ol>';
+$string['members_help'] = '<p>Before checking the box, check this link:</p>
+<p><a href="https://rumbletalk.com/blog/index.php/knowledge-base/how-to-make-a-members-only-chat-in-a-moodle-page/" target="_blank">Members Only</a></p>';
 $string['login_type'] = 'Login Type: ';
 $string['members_only'] = 'Members Only';
 $string['default_height'] = '500';
