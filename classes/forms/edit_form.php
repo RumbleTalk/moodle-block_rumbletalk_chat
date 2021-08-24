@@ -25,23 +25,31 @@
 class block_rumbletalk_chat_edit_form extends block_edit_form {
 
     protected function specific_definition($mform) {
+
+        $mform->addElement('html', get_string('intro', 'block_rumbletalk_chat'));
+
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('embed_chat', 'block_rumbletalk_chat'));
+
         // Input field for HashCode.
         $mform->addElement('text', 'config_code', get_string('embed_code', 'block_rumbletalk_chat'));
         $mform->addRule('config_code', get_string('error_code_required', 'block_rumbletalk_chat'), 'required', null, 'client');
         $mform->addHelpButton('config_code', 'code', 'block_rumbletalk_chat');
         $mform->setType('config_code', PARAM_TEXT);
+
         // Input field for Height.
         $mform->addElement('text', 'config_height', get_string('embed_height', 'block_rumbletalk_chat'));
         $mform->addRule('config_height', get_string('error_numbers_only', 'block_rumbletalk_chat'), 'numeric', null, 'client');
         $mform->addHelpButton('config_height', 'height', 'block_rumbletalk_chat');
         $mform->setType('config_height', PARAM_TEXT);
+
         // Checkbox for Members Only.
         $mform->addElement('advcheckbox', 'config_members', get_string('login_type', 'block_rumbletalk_chat'),
          get_string('members_only', 'block_rumbletalk_chat'), array('group' => 1), array(0, 1));
         $mform->addHelpButton('config_members', 'members', 'block_rumbletalk_chat');
         $mform->setType('config_members', PARAM_TEXT);
+
+        $mform->addElement('html', get_string('take_note', 'block_rumbletalk_chat'));
     }
 
     public function specialization() {
