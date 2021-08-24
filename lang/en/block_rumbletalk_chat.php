@@ -78,6 +78,8 @@ $string['members_help'] = '<p>Before checking the box, you must first follow the
 $string['login_type'] = 'Login Type: ';
 $string['members_only'] = 'Members Only';
 $string['default_height'] = '500';
+$string['intro'] = '<div style="width: 85%; margin-bottom: 2em; padding-left: 1em;">RumbleTalk chat will allow you to add a group chat into the right side of your page. Set the chat to allow guests and social logins or by checking the members checkbox, users will login to the chat with their Moodle user name automatically.</div>';
+$string['take_note'] = '<div style="width: 85%; margin-bottom: 2em; padding-left: 1em;">Take note, this option is not intended to be used in a localhost server. Using this option in a localhost server, may result to the chat will not work properly.</div>';
 
 // Settings Strings.
 $string['headerconfig'] = 'Settings';
