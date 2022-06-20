@@ -67,21 +67,8 @@ class block_rumbletalk_chat extends block_base {
                     $userpicture = new user_picture($USER);
                     $url = $userpicture->get_url($this->page);
 
-                    $this->content->text .= "<script>
-                        (function(g, v, w, d, s, a, b) {
-                        w['rumbleTalkMessageQueueName'] = g;
-                        w[g] = w[g] ||
-                        function() {
-                        (w[g].q = w[g].q || []).push(arguments)
-                        };
-                        a = d.createElement(s);
-                        b = d.getElementsByTagName(s)[0];
-                        a.async = 1;
-                        a.src = 'https://d1pfint8izqszg.cloudfront.net/api/'
-                         + v + '/sdk.js';
-                        b.parentNode.insertBefore(a, b);
-                        })('rtmq', 'v1.0.0', window, document, 'script');
-                    </script>";
+                    $this->page->requires->js_call_amd('block_rumbletalk_chat/login', 'init');
+
                     $this->content->text .= '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', image: \'' . $url . '\', forceLogin: \'true\'})</script>';
                 }
 

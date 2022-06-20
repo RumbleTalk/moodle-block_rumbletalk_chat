@@ -39,7 +39,7 @@ $PAGE->navbar->add(get_string('create_account', 'block_rumbletalk_chat'));
 
 echo $OUTPUT->header();
 
-$mform = new create_account_form();
+$mform = new create_form();
 if ($mform->is_cancelled()) {
     redirect(new moodle_url('/', ['redirect' => 0]));
 } else if ($data = $mform->get_data()) {
