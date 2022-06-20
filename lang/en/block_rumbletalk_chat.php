@@ -28,20 +28,6 @@ $string['rumbletalk'] = 'RumbleTalk Group Chat';
 // Block Strings.
 $string['hello_guest'] = 'Hello guest, please login first to join our awesome chat.';
 $string['chat_div'] = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
-$string['login_script'] = "<script>
-                        (function(g, v, w, d, s, a, b) {
-                        w['rumbleTalkMessageQueueName'] = g;
-                        w[g] = w[g] ||
-                        function() {
-                        (w[g].q = w[g].q || []).push(arguments)
-                        };
-                        a = d.createElement(s);
-                        b = d.getElementsByTagName(s)[0];
-                        a.async = 1;
-                        a.src = 'https://d1pfint8izqszg.cloudfront.net/api/' + v + '/sdk.js';
-                        b.parentNode.insertBefore(a, b);
-                        })('rtmq', 'v1.0.0', window, document, 'script');
-                    </script>";
 $string['rtmq_script'] = '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', image: \'' . $url . '\', forceLogin: \'true\'})</script>';
 $string['no_chat'] = 'There is no chat available.';
 $string['line_break'] = '<p>&nbsp;</p>';
@@ -61,7 +47,7 @@ $string['embed_height'] = 'Chat Height: ';
 $string['embed_code'] = 'Chat Hashcode: ';
 $string['code'] = 'How to get hashcode?';
 $string['code_help'] = '<p>Where is a hashcode found?</p>
-<p>You can find it at you Administrator panel(https://cp.rumbletalk.com/login) at RumbleTalk.</p>';
+<p>You can find it at you <a href="https://cp.rumbletalk.com/login" target="_blank">Administrator panel</a>(https://cp.rumbletalk.com/login) at RumbleTalk.</p>';
 $string['height'] = 'What is Chat Height?';
 $string['height_help'] = '<p>Chat\'s Height is based on pixels(px).</p>
 <p>Please enter numbers only.</p>';
