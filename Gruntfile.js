@@ -13,10 +13,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         jshint: {
-            all: ['create_account.js']
+            all: ['create_account.js', 'login.js']
         },
         watch: {
-            files: ['create_account.js'],
+            files: ['create_account.js', 'login.js'],
             tasks: ['jshint']
         }
 
