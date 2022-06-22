@@ -58,7 +58,6 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
             if (empty($this->config->height)) {
                 $this->config->height = get_string('default_height', 'block_rumbletalk_chat');
             }
-            $this->content->text = get_string('chat_div', 'block_rumbletalk_chat');
         }
     }
 
