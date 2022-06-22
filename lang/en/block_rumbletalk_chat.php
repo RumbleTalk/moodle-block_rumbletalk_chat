@@ -27,8 +27,6 @@ $string['rumbletalk'] = 'RumbleTalk Group Chat';
 
 // Block Strings.
 $string['hello_guest'] = 'Hello guest, please login first to join our awesome chat.';
-$string['chat_div'] = '<div style="height: ' . $this->config->height . 'px;"><div id="rt-' . md5($this->config->code) . '"></div> <script src="https://rumbletalk.com/client/?' . $this->config->code . '"></script></div>';
-$string['rtmq_script'] = '<script>rtmq(\'login\',{hash: \'' . $this->config->code . '\', username: \'' . $USER->username . '\', image: \'' . $url . '\', forceLogin: \'true\'})</script>';
 $string['no_chat'] = 'There is no chat available.';
 $string['line_break'] = '<p>&nbsp;</p>';
 $string['trademark'] = 'RumbleTalk, LTD.';

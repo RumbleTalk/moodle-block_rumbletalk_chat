@@ -1,4 +1,4 @@
-export function init() {
+export const init = () => {
     (function (g, v, w, d, s, a, b) {
         w['rumbleTalkMessageQueueName'] = g;
         w[g] = w[g] ||
