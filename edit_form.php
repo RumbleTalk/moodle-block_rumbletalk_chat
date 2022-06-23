@@ -70,10 +70,6 @@ class block_rumbletalk_chat_edit_form extends block_edit_form {
             $data->text = strip_tags($data->text);
         }
 
-        if ($this->config->members == 1) {
-            $this->content->text .= get_string('rtmq_script', 'block_rumbletalk_chat');
-        }
-
         // And now forward to the default implementation defined in the parent class.
         return parent::instance_config_save($data, $nolongerused);
     }

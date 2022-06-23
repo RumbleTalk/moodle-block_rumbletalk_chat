@@ -67,8 +67,6 @@ class block_rumbletalk_chat extends block_base {
                     $userpicture = new user_picture($USER);
                     $url = $userpicture->get_url($this->page);
 
-                    // $this->page->requires->js_call_amd('block_rumbletalk_chat/login', 'init');
-
                     $this->content->text .= 
                     "<script>
                     (function (g, v, w, d, s, a, b) {
